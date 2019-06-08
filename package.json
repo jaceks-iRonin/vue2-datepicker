@@ -12,7 +12,7 @@
     "demo": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.demo.config.js",
     "build": "npm run lint && npm test && cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.deploy.config.js",
     "lint": "eslint src/**/* test/**/*",
-    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "version": "",
     "test:push": "jest --coverage --coverageReporters=text-lcov | coveralls",
     "test": "jest",
     "release": "bash build/git.sh && bash build/release.sh"
