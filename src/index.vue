@@ -573,11 +573,15 @@ export default {
     handleKeydown (event) {
       const keyCode = event.keyCode
       // Tab 9 or Enter 13
-      if (keyCode === 9 || keyCode === 13) {
+      if (keyCode === 9) {
         // ie emit the watch before the change event
         this.handleChange()
         this.userInput = null
         this.closePopup()
+      } else if (keyCode === 13) {
+        this.handleChange()
+        this.userInput = null
+        this.$emit('focus', event)
       }
     },
     handleInput (event) {
