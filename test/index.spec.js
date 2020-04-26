@@ -31,7 +31,7 @@ describe('datepicker', () => {
     expect(vm.popupVisible).toBe(false)
     input.trigger('focus')
     input.trigger('keydown', { keyCode: 13 })
-    expect(vm.popupVisible).toBe(false)
+    expect(vm.popupVisible).toBe(true)
     input.trigger('blur')
     expect(wrapper.emitted().blur).toBeTruthy()
   })

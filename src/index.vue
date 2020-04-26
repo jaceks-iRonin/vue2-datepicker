@@ -581,7 +581,7 @@ export default {
       } else if (keyCode === 13) {
         this.handleChange()
         this.userInput = null
-        this.$emit('focus', event)
+        this.handleFocus(event)
       }
     },
     handleInput (event) {
