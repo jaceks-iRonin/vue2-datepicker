@@ -506,6 +506,7 @@ export default {
       }
       this.popupVisible = true
       this.emitDate('input')
+      this.emitDate('change')
     },
     closePopup () {
       this.popupVisible = false
